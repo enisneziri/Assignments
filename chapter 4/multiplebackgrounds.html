@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Multiple backgrounds</title>
+		<style type="text/css">
+			div.background
+			{
+				
+				background-image: url(foto/logo.png), url(foto/ocean.png);
+				background-position: bottom right, 100% center;
+				background-origin: border-box, content-box;
+				background-repeat: no-repeat , no-repeat;
+			
+			}
+			div.content{
+				width: 300px;
+				padding: 10px 15px;
+				color: black;
+				background-color:transparent;
+				font-size: 150%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="background">
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+
+	</body>
+</html>

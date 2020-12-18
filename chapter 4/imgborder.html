@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--stretchin images-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Image border</title>
+		<style type="text/css">
+			div {
+				border-width: 50px;
+				width: 500px;
+				padding: 20px 20px;
+			}
+			#stretch {
+				width: 300px;
+        height: 300px;        
+        background: url("foto/ocean2.png") no-repeat;
+        background-size: cover;
+        border: 6px solid #333;
+        margin: 20px;
+				
+			}
+			#repeat{
+				border:10px solid transparent;
+				padding: 15px;
+				border-image: url(foto/ocean2.png)20 round;
+				
+
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Image borders</h2>
+		<img src="foto/ocean2.png" id="stretch" alt="ocean">
+		<p><div>Streching the image border</div></p>
+		<p><div><img id="repeat" src="foto/ocean2.png"></div></p>
+		<div>Repeating the image border</div>
+
+	</body>
+</html>

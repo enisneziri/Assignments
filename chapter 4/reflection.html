@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reflelction</title>
+		<style type="text/css">
+			img {margin: 10px;}
+			img.below{
+				-webkit-box-reflect:below 5px
+				-webkit-gradient(
+					linear, left top, left bottom,
+					from(transparent), to(white));
+			}
+			img.right
+			{
+				-webkit-box-reflect: right 5px
+				-webkit-gradient(
+					linear, right top, left top,
+					from(transparent), to(white));
+			}
+		</style>
+	</head>
+	<body>
+		<img src="foto/ocean.png" alt="ocean" class="below" width="138" height="180">
+		<img src="foto/ocean.png" alt="ocean" width="138" height="180" class="right">
+
+	</body>
+</html>
