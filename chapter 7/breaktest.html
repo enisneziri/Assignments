@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--fig. 8.11: BreakTest.html-->
+<!--Using the break statement in a for statement-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Using the break statement in a for statement</title>
+		<script type="text/javascript">
+			
+			for ( var count = 1; count <= 10; ++count )
+			{
+				if ( count == 9 )
+					break;// break look only if count 9
+				document.writeln( count + " " );
+			}//end for
+
+			document.writeln("<p>Broke out of loop at count = " + count + "</p>" );
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
