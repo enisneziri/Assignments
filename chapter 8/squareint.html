@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--Fig. 9.2: Squareint.html-->
+<!--Programmer-defined function square.-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Squarein</title>
+        <style type="text/css">
+        p { margin: 0;}
+        </style>
+        <script>
+            document.writeln( "<h1>Square the numbers from 1 to 10</h1>" );
+
+            //square the numbers from 1 to 10
+            for ( var x = 1; x <=10; ++x )
+            document.writeln( "<p>The square of " + x + " is " + square(x) + "</p>");
+            //the following square function definition's body is executed
+            //only when the function is called explicity as in line 19
+            function square(y)
+            {
+                return y * y;
+            }//end function square
+
+        </script>
+        <body>
+            <!--empty body element-->
+        </body>
+    </head>
+</html>
