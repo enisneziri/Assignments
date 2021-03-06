@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--fig.9.9: scoping.html-->
+<!--scopint example-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Scoping Example</title>
+        <style type="text/css">
+        p { margin: 0px;}
+        p.space { margin-top: 10px;}
+        </style>
+
+        <script>
+            var output;//stores the string to display
+            var x = 1;//global variable
+
+            function start()
+            {
+                var x = 5;//variable local to function start
+                output = "<p>local x in start is " + x + "</p>";
+
+                functionA();//functionA has local x
+                functionB();//functionB uses global variable x
+                functionA();//functionA reinitializes local x
+                functionB();//global variable x retains its value
+
+                output += "<p class='space'>Local x in start is " + x + "</p>";
+
+                document.getElementById("results").innerHTML = output;
+            }//end function start
+
+            function functionA() {
+                var x = 25;//initialized each time FunctionA is called
+
+                output +="<p class='space'>Local x in functionA is " + x + "before entering FunctionA</p>";
+                ++x;
+                output +="<p>Local x in functionA is " + x + "before exting FunctionA</p>";
+
+                
+            }//end FunctionA
+
+            function functionB() {
+                output += "<p class='space'>Global variable x is " + x + "on entering FunctionB</p>";
+                x *= 10;
+                output += "<p>Global variable x is " + x + "on exiting FunctionB</p>";
+
+                
+            }//end FunctionB
+
+            window.addEventListener("load", start, false);
+        </script>
+    </head>
+    <body>
+        <div id="results">
+            
+        </div>
+    </body>
+</html>

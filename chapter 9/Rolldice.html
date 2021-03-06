@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--Fig. 9.5: Rolldice.html-->
+<!--random dive image generation using math.random.-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random Dice Images</title>
+        <style type="text/css">
+            li { display: inline; margin-right: 10px;}
+            ul { margin: 0;}
+        </style>
+        <script>
+            //variables used to interact witht he img elements
+           var dei1Image;
+           var dei2Image;
+           var dei3Image;
+           var dei4Image;
+
+           //register button listener and get the img
+           function start()
+           {
+               var button = document.getElementById( "rollButton" );
+               button.addEventListener( "click", rollDice, false );
+               dei1Image = document.getElementById( "dei1" );
+               dei2Image = document.getElementById( "dei2" );
+               dei3Image = document.getElementById( "dei3" );
+               dei4Image = document.getElementById( "dei4" );
+           }//end function rolldice
+
+           //roll the dice
+           function rollDice()
+           {
+
+            setImage( dei1Image );
+            setImage( dei2Image );
+            setImage( dei3Image );
+            setImage( dei4Image );
+           }//end function rollDice
+
+           //set image source for a die
+           function setImage()
+           {
+               var dieValue = Math.floor( 1 + Math.random()* 6);
+               dieImg.setAttribute("src", "die" + dieValue + ".png");
+               dieImg.setAttribute("alt",
+               "die image with" + dieValue + " spot(s)" );
+           }//end function setImage
+
+           window.addEventListener( "load", start, false );
+            
+        </script>
+        <body>
+            <form action="#">
+                <input id="rollButton" type="button" value="Roll Dice">
+            </form>
+            <ol>
+                <li><img id="dei1" src="die1Image.png" alt="die 1 image"></li>
+                <li><img id="dei2" src="die2Image.png" alt="die 2 image"></li>
+                <li><img id="dei3" src="die3Image.png" alt="die 3 image"></li>
+                <li><img id="dei4" src="die4Image.png" alt="die 4 image"></li>
+            </ol>
+            
+        </body>
+    </head>
+</html>
