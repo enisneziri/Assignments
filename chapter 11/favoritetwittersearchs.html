@@ -1,0 +1,50 @@
+<html lang="en">
+    <!--fig. 11.17: favoritetwittersearches.html-->
+    <!--Favorite twitter searches web applications.-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="favoritetwittersearches.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>favorite twitter searches</title>
+    <style>
+        p{
+            margin: 0px;
+        }
+        #welcomeMessage {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type = "text"] {width: 250px;}
+        /*list item style*/
+        span { margin-left: 10px;
+        display: inline-block;
+    width: 100px;}
+    li {
+        list-style-type: none;
+        width: 220px;
+    }
+    li:first-child{border-top: 1px solid grey;}
+    li:nth-child(even) { background-color: lightyellow;
+    border-bottom: 1px solid grey;}
+    li:nth-child(odd){
+        background-color: lightblue;
+        border-bottom: 1px solid grey;
+    }
+    </style>
+</head>
+<body>
+    <h1>favorite twitter searches</h1>
+    <p id="welcomeMessage"></p>
+    <form action="#">
+        <p><input type="text" id="query" placeholder="Entry Twitter search query">
+        <a href="https://dev.twitter.com/docs/using-search">Twitter search operators</a></p>
+        <p><input type="text" placeholder="Tag your query" id="tag">
+        <input type="button" value="Save" id="saveButton">
+    <input type="button" value="Clear All Saved Searches" id="clearButton"></p>
+    </form>
+    <h1>Previously tagged searches</h1>
+    <div id="searches"></div>
+    
+</body>
+</html>

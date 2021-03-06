@@ -1,0 +1,22 @@
+//Fig. 11.9 : spitandsubstring.js
+//string object methods split and substring.
+function splitButtonPressed()
+{
+    var inputString = document.getElementById("inputFeild").value;
+    var tokens = inputString.split( " " );
+
+    var results = document.getElementById("results");
+    results.innerHTML = "</p>The sentece split into words is: </p>" +
+    "<p class = 'indent'>" +
+    tokens.join("</p><p class='indent'>" ) + "</p>" + 
+    "<p>The first 10 characters of the input string are: </p>" +
+    "<p class = 'indent'>" + inputString.substring( 0, 10 ) + "'</p>";
+}//end function splitButtonPressed
+
+//register click event handler for searchbutton
+function start()
+{
+    var splitButton = document.getElementById("splitButton");
+    splitButton.addEventListener("click", splitButtonPressed, false);
+}//end function start
+window.addEventListener("load",  start, false);
